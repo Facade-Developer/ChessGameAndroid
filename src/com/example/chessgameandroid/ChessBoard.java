@@ -90,6 +90,7 @@ public class ChessBoard extends Application
 
 	private static void reset()
 	{
+		possible.clear();
 		for(int i = 0; i < 8; i++)
 		{
 			possible.add(new ArrayList<List<Line>>(8));

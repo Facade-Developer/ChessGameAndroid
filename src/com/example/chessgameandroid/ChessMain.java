@@ -1,6 +1,9 @@
 package com.example.chessgameandroid;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -93,10 +96,30 @@ public class ChessMain extends Activity
 			case 0:
 				mess = "Check";
 				if(ChessBoard.isMate(val == white))
+				{
 					mess += "mate";
+					playerWin(val==white);
+				}
 			}
 			txt.setText(mess);
 		}
+	}
+
+	public void playerWin(boolean b)
+	{
+		AlertDialog.Builder builder=new AlertDialog.Builder(this);
+		String message = " wins!";
+		if(b)
+			message = "Black" + message;
+		else
+			message = "White" + message;
+		builder.setTitle(message);
+		builder.setMessage("Restart the Game?");
+		builder.setPositiveButton("Yes", new OnClickListener() 
+		{ public void onClick(DialogInterface dialog, int which) { ChessBoard.restart(); } });
+
+		builder.setNegativeButton("Cancel", null);
+		builder.show();
 	}
 
 	public void setTurn(boolean white)
