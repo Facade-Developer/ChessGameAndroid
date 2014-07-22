@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="select_square"			>#FF0000FF</color>
+	<color name="white_square"			>#FFFFFFFF</color>
+	<color name="black_square"			>#FF000000</color>
+	<color name="poss_black_square"		>#FFAA0000</color>
+	<color name="poss_white_square"		>#FFFF0000</color>
+	<color name="threat_black_square"	>#FF008800</color>
+	<color name="threat_white_square"	>#FF00EE00</color>
+	<color name="select_piece"			>#FFFFFFFF</color>
+	<color name="white_piece"			>#FF000000</color>
+	<color name="black_piece"			>#FFFFFFFF</color>
+	<color name="poss_white_piece"		>#FFFFFFFF</color>
+	<color name="poss_black_piece"		>#FF000000</color>
+	<color name="threat_white_piece"	>#FF000000</color>
+	<color name="threat_black_piece"	>#FFFFFFFF</color>
+</resources>
