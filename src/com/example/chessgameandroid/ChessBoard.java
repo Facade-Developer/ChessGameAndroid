@@ -618,7 +618,9 @@ public class ChessBoard extends Application
 							if(isPossibleMove(ln))
 								return false;
 				
-			}
+			} else
+                return false;
+            
 		return true;
 	}
 	
@@ -695,6 +697,8 @@ public class ChessBoard extends Application
 				}
 				if(threat.type == 0)
 				{
+                    if (type == 5)
+                        return isDangerous(loc,isWhite(this));
 					val = 0;
 					for(Line thr : threat.line)
 					{
